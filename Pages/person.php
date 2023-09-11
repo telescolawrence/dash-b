@@ -1,17 +1,6 @@
 <?php
-// Database connection parameters
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "robotics";
+@include 'config.php';
 
-// Create a connection to the database
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Check the connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 if(isset($_POST['submit'])){
 
 // Retrieve data from the form fields
@@ -38,7 +27,7 @@ $conn->close();
 </head>
 <body>
     <h2>Team and Referee Information</h2>
-    <form action="insert_person.php" method="POST">
+    <form action="" method="POST">
         <label for="team_name">Team Name:</label>
         <input type="text" id="team_name" name="team_name" required><br><br>
 

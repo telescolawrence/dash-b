@@ -23,7 +23,7 @@ if(isset($_POST['submit'])){
         
     
         // SQL query to insert data into the scores table
-        $sql = "INSERT INTO scores (team_name, group_name, launching_points, flight_path_points, alliance_victory_points, 
+        $sql = "INSERT INTO elem_scores_round1 (team_name, group_name, launching_points, flight_path_points, alliance_victory_points, 
                 activate_alliance_system_points, space_time_energy_transfer_points, alliance_route_planning_points, 
                 remaining_time_minutes, reset_deduction_points, single_round_score) 
                 VALUES ('$team_name', '$group_name', $launching_points, $flight_path_points, $alliance_victory_points, 
@@ -94,7 +94,7 @@ if(isset($_POST['submit'])){
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close" id="closeModalBtn">&times;</span>
-            <form action="submit_score.php" method="post">
+            <form action="" method="post">
                 <label for="team_name">Team Name:</label>
                 <input type="text" id="team_name" name="team_name" required><br><br>
             
