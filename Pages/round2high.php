@@ -93,8 +93,8 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-edit"></i>Elementary School</a>
                         <ul class="dropdown-menu">
-                            <li><a href="round1.php">Round 1</a></li>
-                            <li><a href="round2.php">Round 2</a></li>
+                            <li><a href="round1mid.php">Round 1</a></li>
+                            <li><a href="round2mid.php">Round 2</a></li>
                         </ul>
                     </li>
                    
@@ -111,7 +111,7 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user-secret"></i>High School</a>
                         <ul class="dropdown-menu">
-                            <li><a href="round1high.php">Round 1</a></li>
+                        <li><a href="round1high.php">Round 1</a></li>
                             <li><a href="round2high.php">Round 2</a></li>
                         </ul>
                     </li>
@@ -131,10 +131,10 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="data-table-list">
                         <div class="basic-tb-hd">
-                            <h2>Elementary School Scores Table</h2>
-                            <h3>Round 1</h3>
+                            <h2>Middle School scores Table</h2>
+                            <h3>Round 2</h3>
                         </div>
-                        <button style="margin-left: 94%; margin-top: -7%" type="button" class="btn btn-danger waves-effect btn-sm" data-toggle="modal" data-target="#add"><i class ="fa fa-plus"></i><a href="input1.php">Add</a></button>
+                        <button style="margin-left: 94%; margin-top: -7%" type="button" class="btn btn-danger waves-effect btn-sm" data-toggle="modal" data-target="#add"><i class ="fa fa-plus"></i><a href="input6.php">Add</a></button>
                             <div class="modal fade in" id="add" role="dialog">
                                     
                             </div>
@@ -143,7 +143,7 @@
                                 <thead>
                                     <tr>
                                         
-                                        <th>Team Name</th>
+                                    <th>Team Name</th>
                                         <th>Player 1</th>
                                         <th>Player 2</th>
                                        <!-- <th>.</th> -->
@@ -155,9 +155,9 @@
                                 <tbody>
                                     <tr>
                                      
-                                        <td><u>Meru</u></td>
-                                        <td>Joy</td>
-                                        <td>Thura</td>
+                                        <td><u>Mombasa</u></td>
+                                        <td>Musa</td>
+                                        <td>Asha</td>
                                         <!-- <td>.</td>
                                         <td><small>.</small></td>
                                         <td>.</td> -->
@@ -166,9 +166,9 @@
                                     </tr>
                                     <tr>
                                         
-                                        <td><u>Kitui</u></td>
-                                        <td><i>Zack</i></td>
-                                        <td>Bellita</td>
+                                        <td><u>Nakuru</u></td>
+                                        <td>Rose</td>
+                                        <td>Peter</td>
                                         <!-- <td>.</td>
                                         <td><small>.</small></td>
                                         <td>.</td> -->

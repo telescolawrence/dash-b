@@ -98,7 +98,7 @@ $conn->close();
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <!-- Start Header Top Area -->
-    <div class="header-top-area" style="background-color: #d9534f; ">
+   <div class="header-top-area" style="background-color: #d9534f">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
@@ -106,23 +106,7 @@ $conn->close();
                         <a href="#"><strong><i class="fa fa-laptop" style="color:white; font-size: 24px;"> Afribot Robotics</i></strong> </a>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                    <div class="header-top-menu">
-                        <ul class="nav navbar-nav notika-top-nav">
-                           
-                            <li style="margin-left: 70%" class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-support"></i></span></a>
-                                <div role="menu" class="dropdown-menu message-dd task-dd animated zoomIn">
-                                    <div class="hd-mg-tt">
-                                        <h2><i class="notika-icon notika-support"></i> Emanuel Sensya</h2>
-                                    </div>
-                                    <div class="hd-message-info hd-task-info">
-                                       <a href="../index.php"> <button class="btn btn-danger btn-sm" style="width: 100%"><i class="fa fa-sign-out"></i>Log out</button></a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -137,9 +121,9 @@ $conn->close();
                         </li>
                         <li><a data-toggle="tab" href="#info"><i class="fa fa-list-alt"></i>Elementary School</a>
                         </li>
-                        <li><a  href="shippingtransaction.php"><i class="fa fa-edit"></i>Middle School</a>
+                        <li><a data-toggle="tab" href="#infor"><i class="fa fa-edit"></i>Middle School</a>
                         </li>
-                        <li><a  href="usermanagement.php"><i class="fa fa-user-secret"></i>High School</a>
+                        <li><a data-toggle="tab" href="#inform"><i class="fa fa-user-secret"></i>High School</a>
                     </ul>
                     <div class="tab-content custom-menu-content">
                         <div id="info" class="tab-pane notika-tab-menu-bg animated flipInX">
@@ -150,36 +134,66 @@ $conn->close();
                             </ul>
                         </div>
                         
-                    </div>
-                </div>
+                        <div id="infor" class="tab-pane notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li><a href="round1mid.php">Round 1</a>
+                                </li>
+                                <li><a href="round2mid.php">Round 2</a>
+                                </li>
+                               
+                            </ul>
+                        </div>
+
+                        <div id="inform" class="tab-pane notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li><a href="round1mid.php">Round 1</a>
+                                </li>
+                                <li><a href="round2mid.php">Round 2</a>
+                                </li>
+                               
+                            </ul>
+                        </div>
+
+
             </div>
         </div>
     </div>
     <!-- Main Menu area End-->
     <!-- Start Status area -->
     <BR>
-   <h2 >  .    TO BE POPULATED</h2>
+   
    <h2>Competition Dashboard</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Rank</th>
-                
-                <th>Team Name</th>
-                
-                <th>Total Score</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($teams as $team): ?>
-                <tr>
-                    <td><?php echo $team['rank']; ?></td>
-                    <td><?php echo $team['team_name']; ?></td>
-                    <td><?php echo $team['total_score']; ?></td>
-                </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
+   <?php
+@include 'config.php';
+
+// SQL query to retrieve data from the players table
+$sql = "SELECT * FROM players";
+$result = $conn->query($sql);
+
+// Check if there are any records
+if ($result->num_rows > 0) {
+    echo "<table border='1'>";
+    echo "<tr><th>Team Name</th><th>Player One</th><th>Player Two</th></tr>";
+
+    while ($row = $result->fetch_assoc()) {
+    
+        echo "<tr>";
+        echo "<td>" . $row['team_name'] . "</td>";
+        echo "<td>" . $row['player_one'] . "</td>";
+        echo "<td>" . $row['player_two'] . "</td>";
+        echo "</tr>";
+    }
+}
+// Close the database connection
+$conn->close();
+?>
+        <table>
+<td>
+<?php echo "<td>" . $row['team_name'] . "</td>"; ?>
+    <tr></tr>
+</td>
+
+        </table>
 
     <!-- Add a section for displaying performance metrics here -->
 

@@ -1,3 +1,5 @@
+
+
 <!doctype html>
 <html class="no-js" lang="">
 
@@ -82,33 +84,44 @@
     <!-- End Header Top Area -->
     <!-- Main Menu area start-->
     <div class="main-menu-area mg-tb-40">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
-                        <li><a href="dashboard.php" ><i class="fa fa-home"></i>Dashboard</a>
-                        </li>
-                        <li class="active"><a data-toggle="tab" href="#info"><i class="fa fa-list-alt"></i>Elementary School</a>
-                        </li>
-                        <li><a  href="shippingtransaction.php"><i class="fa fa-edit"></i>Middle School</a>
-                        </li>
-                        <li><a  href="usermanagement.php"><i class="fa fa-user-secret"></i>High School</a>
-                    </ul>
-                    <div class="tab-content custom-menu-content">
-                        <div id="info" class="tab-pane active notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                            <li><a href="round1.php">Round 1</a>
-                                </li>
-                                <li ><a href="round2.php" style="color: red"><b><u>Round 2</u></b></a>
-                               
-                            </ul>
-                        </div>
-                      
-                    </div>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
+                    <li><a href="dashboard.php"><i class="fa fa-home"></i>Dashboard</a></li>
+
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-edit"></i>Elementary School</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="round1.php">Round 1</a></li>
+                            <li><a href="round2.php">Round 2</a></li>
+                        </ul>
+                    </li>
+                   
+                   
+                   
+                   
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-edit"></i>Middle School</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="round1mid.php">Round 1</a></li>
+                            <li><a href="round2mid.php">Round 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-user-secret"></i>High School</a>
+                        <ul class="dropdown-menu">
+                        <li><a href="round1high.php">Round 1</a></li>
+                            <li><a href="round2high.php">Round 2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
             </div>
         </div>
     </div>
+</div>
+
     <!-- Main Menu area End-->
     <!-- Start Status area -->
 
@@ -118,46 +131,47 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="data-table-list">
                         <div class="basic-tb-hd">
-                            <h2>Driver Information Table</h2>
+                            <h2>Elementary Schools Score Table</h2>
+                            <h3>Round 2</h3>
                         </div>
-                        <button style="margin-left: 94%; margin-top: -7%" type="button" class="btn btn-danger waves-effect btn-sm" data-toggle="modal" data-target="#add"><i class ="fa fa-plus"></i><a href="input.php">Add</a></button>
+                        <button style="margin-left: 94%; margin-top: -7%" type="button" class="btn btn-danger waves-effect btn-sm" data-toggle="modal" data-target="#add"><i class ="fa fa-plus"></i><a href="input2.php">Add</a></button>
                             <div class="modal fade in" id="add" role="dialog">
                                     
                             </div>
                         <div class="table-responsive">
-                        <table id="data-table-basic" class="table table-striped">
+                            <table id="data-table-basic" class="table table-striped">
                                 <thead>
                                     <tr>
                                         
                                         <th>Team Name</th>
                                         <th>Player 1</th>
                                         <th>Player 2</th>
-                                        <th>.</th>
-                                        <th>.</th>
-                                        <th>.</th>
+                                       <!-- <th>.</th> -->
+                                        <!-- <th>.</th> -->
+                                        <!-- <th>.</th> -->
                                         <th style="width: 9%"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                      
-                                        <td>.t</td>
-                                        <td><i>.</i></td>
-                                        <td>.</td>
-                                        <td>.</td>
+                                        <td><u>Nairobi</u></td>
+                                        <td>Bob</td>
+                                        <td>Maria</td>
+                                        <!-- <td>.</td>
                                         <td><small>.</small></td>
-                                        <td>.</td>
+                                        <td>.</td> -->
                                         <td><button type="button" class="btn btn-danger waves-effect btn-sm" ><i class ="fa fa-trash"></i></button> 
                         </td>
                                     </tr>
                                     <tr>
                                         
-                                        <td>.t</td>
-                                        <td><i>.</i></td>
-                                        <td>.</td>
-                                        <td>.</td>
+                                        <td><u>Kisumu</u></td>
+                                        <td>Rachel</td>
+                                        <td>Merolyne</td>
+                                        <!-- <td>.</td>
                                         <td><small>.</small></td>
-                                        <td>.</td>
+                                        <td>.</td> -->
                                         <td><button type="button" class="btn btn-danger waves-effect btn-sm" ><i class ="fa fa-trash"></i></button> 
                         </td>
                                     </tr>
@@ -168,9 +182,9 @@
                                     <th>Team Name</th>
                                         <th>Player 1</th>
                                         <th>Player 2</th>
+                                        <!-- <th>.</th>
                                         <th>.</th>
-                                        <th>.</th>
-                                        <th>.</th>
+                                        <th>.</th> -->
                                         <th style="width: 9%"></th>
                                     </tr>
                                 </tfoot>
@@ -257,7 +271,7 @@
     <script src="js/main.js"></script>
     <!-- tawk chat JS
         ============================================ -->
-    <script src="js/tawk-chat.js"></script>
+    <!-- <script src="js/tawk-chat.js"></script> -->
 </body>
 
 </html>
