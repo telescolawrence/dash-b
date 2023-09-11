@@ -1,10 +1,42 @@
+
+
+<?php
+// include_once("config.php");
+// include_once("DbConnection.php");
+@include 'config.php';
+
+
+// Retrieve team data and calculate total scores
+$sql = "SELECT team_name, average_single_round_score FROM elem_scores_averages";
+$result = $conn->query($sql);
+
+$teams = array();
+while ($row = $result->fetch_assoc()) {
+    $teams[] = $row;
+}
+
+// Calculate ranks based on total scores
+usort($teams, function ($a, $b) {
+    return $b['average_single_round_score'] - $a['average_single_round_score'];
+});
+
+$rank = 1;
+foreach ($teams as &$team) {
+    $team['rank'] = $rank++;
+}
+
+// Close the database connection
+$conn->close();
+?>
+
+
 <!doctype html>
 <html class="no-js" lang="">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Shipping and Logistics System</title>
+    <title>Afribot Robotics</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -52,6 +84,10 @@
     <!-- responsive CSS
         ============================================ -->
     <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet" href="css/modal.css">
+    <!-- form styling
+        ============================================ -->
     <!-- modernizr JS
         ============================================ -->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -67,7 +103,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="logo-area">
-                        <a href="#"><strong><i class="fa fa-laptop" style="color:white; font-size: 24px;"> Shipping and Logistics System</i></strong> </a>
+                        <a href="#"><strong><i class="fa fa-laptop" style="color:white; font-size: 24px;"> Afribot Robotics</i></strong> </a>
                     </div>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
@@ -123,8 +159,34 @@
     <!-- Start Status area -->
     <BR>
    <h2 >  .    TO BE POPULATED</h2>
-    <!-- End Status area-->
+   <h2>Competition Dashboard</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                
+                <th>Team Name</th>
+                
+                <th>Total Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($teams as $team): ?>
+                <tr>
+                    <td><?php echo $team['rank']; ?></td>
+                    <td><?php echo $team['team_name']; ?></td>
+                    <td><?php echo $team['total_score']; ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
 
+    <!-- Add a section for displaying performance metrics here -->
+
+    <!-- End Status area-->
+    <script src="js/modal.js"></script>
+    <!-- wow JS
+        ============================================ -->
     <!-- jquery
         ============================================ -->
     <script src="js/vendor/jquery-1.12.4.min.js"></script>

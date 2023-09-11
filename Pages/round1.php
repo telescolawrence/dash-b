@@ -1,10 +1,12 @@
+
+
 <!doctype html>
 <html class="no-js" lang="">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Shipping and Logistics System</title>
+    <title>Afribot Robotics</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -72,26 +74,10 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                     <div class="logo-area">
-                        <a href="#"><strong><i class="fa fa-laptop" style="color:white; font-size: 24px;"> Shipping and Logistics System</i></strong> </a>
+                        <a href="#"><strong><i class="fa fa-laptop" style="color:white; font-size: 24px;"> Afribot Robotics</i></strong> </a>
                     </div>
                 </div>
-                <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
-                    <div class="header-top-menu">
-                        <ul class="nav navbar-nav notika-top-nav">
-                           
-                            <li style="margin-left: 70%" class="nav-item"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-support"></i></span></a>
-                                <div role="menu" class="dropdown-menu message-dd task-dd animated zoomIn">
-                                    <div class="hd-mg-tt">
-                                        <h2><i class="notika-icon notika-support"></i> Emanuel Sensya</h2>
-                                    </div>
-                                    <div class="hd-message-info hd-task-info">
-                                       <a href="../index.php"> <button class="btn btn-danger btn-sm" style="width: 100%"><i class="fa fa-sign-out"></i>Log out</button></a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </div>
@@ -104,22 +90,23 @@
                     <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
                         <li><a href="dashboard.php" ><i class="fa fa-home"></i>Dashboard</a>
                         </li>
-                        <li class="active"><a data-toggle="tab" href="#info"><i class="fa fa-list-alt"></i>Information</a>
+                        <li class="active"><a data-toggle="tab" href="#info"><i class="fa fa-list-alt"></i>Elementary School</a>
                         </li>
-                        <li><a  href="shippingtransaction.php"><i class="fa fa-edit"></i>Shipping Transaction</a>
+                        <li><a  href="shippingtransaction.php"><i class="fa fa-edit"></i>Middle School</a>
                         </li>
-                        <li><a  href="usermanagement.php"><i class="fa fa-user-secret"></i>User Management</a>
+                        <li><a  href="usermanagement.php"><i class="fa fa-user-secret"></i>High School</a>
                     </ul>
                     <div class="tab-content custom-menu-content">
                         <div id="info" class="tab-pane active notika-tab-menu-bg animated flipInX">
                             <ul class="notika-main-menu-dropdown">
-                                <li class="active"><a href="round1.php" style="color: red"><b><u>Round 1</u></b></a>
-                                </li>
-                                <li ><a href="round2.php">Round 2</a>
+                               <li class="active"><a href="round1.php" style="color: red"><b><u>Round 1</u></b></a>
                                 
+                                </li>
+                                <li><a href="round2.php">Round 2</a>
+                               
                             </ul>
                         </div>
-                        
+                      
                     </div>
                 </div>
             </div>
@@ -134,261 +121,67 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="data-table-list">
                         <div class="basic-tb-hd">
-                            <h2>Driver Information Table</h2>
+                            <h2>Elementary School Table</h2>
                         </div>
-                        <button style="margin-left: 94%; margin-top: -7%" type="button" class="btn btn-danger waves-effect btn-sm" data-toggle="modal" data-target="#add"><i class ="fa fa-plus"></i> Add</button>
+                        <button style="margin-left: 94%; margin-top: -7%" type="button" class="btn btn-danger waves-effect btn-sm" data-toggle="modal" data-target="#add"><i class ="fa fa-plus"></i><a href="input1.php">Add</a></button>
                             <div class="modal fade in" id="add" role="dialog">
-                                    <div class="modal-dialog modals-default">
-                                        <form>
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal">×</button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h2 align ="center">Add Driver</h2>
-                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="form-element-list">
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-md-4 col-sm- col-xs-4">
-                                                            <div class="form-group ic-cmp-int">
-                                                                <div class="form-ic-cmp">
-                                                                    <i class="fa fa-motorcycle"></i>
-                                                                </div>
-                                                                <div class="nk-int-st">
-                                                                    <input class="form-control" placeholder="Enter Driver Name" type="text">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                <div class="col-lg-6 col-md-4 col-sm- col-xs-4">
-                                                            <div class="form-group ic-cmp-int">
-                                                                <div class="form-ic-cmp">
-                                                                    <i class="fa fa-map-envelope"></i>
-                                                                </div>
-                                                                <div class="nk-int-st">
-                                                                    <input class="form-control" placeholder="Enter Email Address" type="text">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                   
-                                                     <div class="row">
-                                                        <div class="col-lg-6 col-md-4 col-sm- col-xs-4">
-                                                            <div class="form-group ic-cmp-int">
-                                                                <div class="form-ic-cmp">
-                                                                    <i class="fa fa-calendar"></i>
-                                                                </div>
-                                                                <div class="nk-int-st"><p style="margin-top: -9%; font-size: 10px">Date of Birth.</p>
-                                                                    <input class="form-control" placeholder="Date of Birth" type="date" style="margin-top: -10%">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-4 col-sm- col-xs-4" style="margin-top: .9%">
-                                                            <div class="form-group ic-cmp-int">
-                                                                <div class="form-ic-cmp">
-                                                                    <i class="fa fa-phone"></i>
-                                                                </div>
-                                                                <div class="nk-int-st">
-                                                                    <input class="form-control" placeholder="Contact Number" type="text">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-md-4 col-sm- col-xs-4">
-                                                            <div class="form-group ic-cmp-int">
-                                                                <div class="form-ic-cmp">
-                                                                    <i class="fa fa-map"></i>
-                                                                </div>
-                                                                <div class="nk-int-st">
-                                                                    <input class="form-control" placeholder="City" type="text">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-4 col-sm- col-xs-4">
-                                                            <div class="form-group ic-cmp-int">
-                                                                <div class="form-ic-cmp">
-                                                                    <i class="fa fa-code"></i>
-                                                                </div>
-                                                                <div class="nk-int-st">
-                                                                    <input class="form-control" placeholder="Zip Code" type="text">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                       <div class="row">
-                                                            <div class="col-lg-4 col-md-4 col-sm- col-xs-4" style="margin-left: 3%">
-                                                            <div class="form-group ic-cmp-int">
-                                                                <div class="form-ic-cmp">
-                                                                    <i class="fa fa-image"></i>
-                                                                </div>
-                                                                <div class="nk-int-st"><p style="margin-top: -5%; font-size: 10px">Select Profile Image.</p>
-                                                                    <input style="margin-top: -7%"  placeholder="" type="file">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                       </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger waves-effect" data-dismiss="modal" style="margin-right: 72%">Close</button>
-                                                 <button type="submit" class="btn btn-danger waves-effect">Save</button>
-                                            </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
+                                    
+                            </div>
                         <div class="table-responsive">
                             <table id="data-table-basic" class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th style="width:10%">Image</th>
-                                        <th>Name</th>
-                                        <th>Contact Number</th>
-                                        <th>Email Address</th>
-                                        <th>City</th>
-                                        <th>Zip Code</th>
-                                        <th>Date of Birth</th>
+                                        
+                                        <th>Team Name</th>
+                                        <th>Player 1</th>
+                                        <th>Player 2</th>
+                                        <th>.</th>
+                                        <th>.</th>
+                                        <th>.</th>
                                         <th style="width: 9%"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><img src="images/avatar.png" width="40px" class="img-circle" alt="User Image"></td>
-                                        <td>Jhon Vincent</td>
-                                        <td><i>+6399845676</i></td>
-                                        <td>Ktb 564 St. Jahan</td>
-                                        <td>Sagay City</td>
-                                        <td><small>6122</small></td>
-                                        <td>March 31, 1983</td>
-                                        <td><button type="button" class="btn btn-info waves-effect btn-sm"  data-toggle="modal" data-target="#edit"><i class ="fa fa-pencil"></i></button> 
-                        <button type="button" class="btn btn-danger waves-effect btn-sm" ><i class ="fa fa-trash"></i></button> 
+                                     
+                                        <td>.t</td>
+                                        <td><i>.</i></td>
+                                        <td>.</td>
+                                        <td>.</td>
+                                        <td><small>.</small></td>
+                                        <td>.</td>
+                                        <td><button type="button" class="btn btn-danger waves-effect btn-sm" ><i class ="fa fa-trash"></i></button> 
                         </td>
                                     </tr>
                                     <tr>
-                                        <td><img src="images/avatar2.png" width="40px" class="img-circle" alt="User Image"></td>
-                                        <td>Jhon Vincent</td>
-                                        <td><i>+6399845676</i></td>
-                                        <td>Ktb 564 St. Jahan</td>
-                                        <td>Sagay City</td>
-                                        <td><small>6122</small></td>
-                                        <td>March 31, 1983</td>
-                                        <td><button type="button" class="btn btn-info waves-effect btn-sm"  data-toggle="modal" data-target="#edit"><i class ="fa fa-pencil"></i></button> 
-                        <button type="button" class="btn btn-danger waves-effect btn-sm" ><i class ="fa fa-trash"></i></button> 
+                                        
+                                        <td>.t</td>
+                                        <td><i>.</i></td>
+                                        <td>.</td>
+                                        <td>.</td>
+                                        <td><small>.</small></td>
+                                        <td>.</td>
+                                        <td><button type="button" class="btn btn-danger waves-effect btn-sm" ><i class ="fa fa-trash"></i></button> 
                         </td>
                                     </tr>
                                 </tbody>
                                 <tfoot>
                                     <tr>
-                                        <th>Image</th>
-                                        <th>Name</th>
-                                        <th>Contact Number</th>
-                                        <th>Email Address</th>
-                                        <th>City</th>
-                                        <th>Zip Code</th>
-                                        <th>Date of Birth</th>
-                                        <th ></th>
+                                      
+                                    <th>Team Name</th>
+                                        <th>Player 1</th>
+                                        <th>Player 2</th>
+                                        <th>.</th>
+                                        <th>.</th>
+                                        <th>.</th>
+                                        <th style="width: 9%"></th>
                                     </tr>
                                 </tfoot>
                             </table>  
                             <div class="modal fade in" id="edit" role="dialog">
                                     <div class="modal-dialog modals-default">
-                                        <form>
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal">×</button>
-                                            </div>
-                                            <div class="modal-body">
-                                                <h2 align="center">Edit Driver</h2>
-                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="form-element-list">
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-md-4 col-sm- col-xs-4">
-                                                            <div class="form-group ic-cmp-int">
-                                                                <div class="form-ic-cmp">
-                                                                    <i class="fa fa-motorcycle"></i>
-                                                                </div>
-                                                                <div class="nk-int-st">
-                                                                    <input class="form-control" placeholder="Enter Driver Name" type="text">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                <div class="col-lg-6 col-md-4 col-sm- col-xs-4">
-                                                            <div class="form-group ic-cmp-int">
-                                                                <div class="form-ic-cmp">
-                                                                    <i class="fa fa-map-envelope"></i>
-                                                                </div>
-                                                                <div class="nk-int-st">
-                                                                    <input class="form-control" placeholder="Enter Email Address" type="text">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                   
-                                                     <div class="row">
-                                                        <div class="col-lg-6 col-md-4 col-sm- col-xs-4">
-                                                            <div class="form-group ic-cmp-int">
-                                                                <div class="form-ic-cmp">
-                                                                    <i class="fa fa-calendar"></i>
-                                                                </div>
-                                                                <div class="nk-int-st"><p style="margin-top: -9%; font-size: 10px">Date of Birth.</p>
-                                                                    <input class="form-control" placeholder="Date of Birth" type="date" style="margin-top: -10%">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-4 col-sm- col-xs-4">
-                                                            <div class="form-group ic-cmp-int">
-                                                                <div class="form-ic-cmp">
-                                                                    <i class="fa fa-phone"></i>
-                                                                </div>
-                                                                <div class="nk-int-st">
-                                                                    <input class="form-control" placeholder="Contact Number" type="text">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-lg-6 col-md-4 col-sm- col-xs-4">
-                                                            <div class="form-group ic-cmp-int">
-                                                                <div class="form-ic-cmp">
-                                                                    <i class="fa fa-map"></i>
-                                                                </div>
-                                                                <div class="nk-int-st">
-                                                                    <input class="form-control" placeholder="City" type="text">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-4 col-sm- col-xs-4">
-                                                            <div class="form-group ic-cmp-int">
-                                                                <div class="form-ic-cmp">
-                                                                    <i class="fa fa-code"></i>
-                                                                </div>
-                                                                <div class="nk-int-st">
-                                                                    <input class="form-control" placeholder="Zip Code" type="text">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                       <div class="row">
-                                                            <div class="col-lg-4 col-md-4 col-sm- col-xs-4" style="margin-left: 3%">
-                                                            <div class="form-group ic-cmp-int">
-                                                                <div class="form-ic-cmp">
-                                                                    <i class="fa fa-image"></i>
-                                                                </div>
-                                                                <div class="nk-int-st"><p style="margin-top: -5%; font-size: 10px">Select Profile Image.</p>
-                                                                    <input style="margin-top: -7%"  placeholder="" type="file">
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-danger waves-effect" data-dismiss="modal" style="margin-right: 72%">Close</button>
-                                                 <button type="submit" class="btn btn-danger waves-effect">Save</button>
-                                            </div>
-                                            </form>
-                                        </div>
+                                        
+                                    
                                     </div>
                                 </div>
                         </div>

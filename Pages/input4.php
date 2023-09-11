@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <style>
+        /* Styles for the modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            border-radius: 5px;
+            width: 70%; /* Increase the width for larger forms */
+            max-height: 80%; /* Add max-height for scroll bar */
+            overflow-y: auto; /* Add a vertical scroll bar */
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        /* Styles for the close button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        /* Style for the form */
+        form {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Score Input Form round 2 </h2>
+    <button id="openModalBtn">Open Form</button>
+    <button ><a href="round2.php">Back</a></button> 
+
+    <!-- The Modal -->
+    <div id="scoreModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn">&times;</span>
+            <form action="submit_score.php" method="post">
+                <label for="team_name">Team Name:</label>
+                <input type="text" id="team_name" name="team_name" required><br><br>
+            
+                <label for="group_name">Group Name:</label>
+                <input type="text" id="group_name" name="group_name" required><br><br>
+            
+                <h3>Basic Task</h3>
+                <label for="launching_points">Successful Launching (50 points):</label>
+                <input type="number" id="launching_points" name="launching_points" min="0" required><br><br>
+            
+                <label for="flight_path_points">Flight Path (Out of 50 points):</label>
+                <input type="number" id="flight_path_points" name="flight_path_points" min="0" required><br><br>
+            
+                <label for="alliance_victory_points">Alliance Victory Reunion (Out of 70 points):</label>
+                <input type="number" id="alliance_victory_points" name="alliance_victory_points" min="0" required><br><br>
+            
+                <label for="activate_alliance_system_points">Activate the Alliance System (50 points):</label>
+                <input type="number" id="activate_alliance_system_points" name="activate_alliance_system_points" min="0" required><br><br>
+            
+                <label for="space_time_energy_transfer_points">Space-Time Energy Transfer (Out of 20 points):</label>
+                <input type="number" id="space_time_energy_transfer_points" name="space_time_energy_transfer_points" min="0" required><br><br>
+            
+                <h3>Additional Task</h3>
+                <label for="alliance_route_planning_points">Alliance Route Planning (60 points):</label>
+                <input type="number" id="alliance_route_planning_points" name="alliance_route_planning_points" min="0" required><br><br>
+            
+                <h3>Remaining Time</h3>
+                <label for="remaining_time_minutes">Remaining Time (Minutes):</label>
+                <input type="number" id="remaining_time_minutes" name="remaining_time_minutes" min="0" required><br><br>
+            
+                <h3>Reset Point Deduction</h3>
+                <label for="reset_deduction_points">Reset Point Deduction (Up to 100 points):</label>
+                <input type="number" id="reset_deduction_points" name="reset_deduction_points" min="0" required><br><br>
+            
+                <h3>Total Score</h3>
+                <label for="total_score">Total Score:</label>
+                <input type="number" id="total_score" name="total_score" min="0" required><br><br>
+            
+                <label for="referee_name">Referee:</label>
+                <input type="text" id="referee_name" name="referee_name" required><br><br>
+            
+                <label for="constants">Constants:</label>
+                <input type="text" id="constants" name="constants" required><br><br>
+            
+                <input type="submit" value="Submit Score">
+                <br>
+                <br>
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Get references to modal elements and buttons
+        var modal = document.getElementById("scoreModal");
+        var openModalBtn = document.getElementById("openModalBtn");
+        var closeModalBtn = document.getElementById("closeModalBtn");
+
+        // Open the modal when the "Open Form" button is clicked
+        openModalBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Close the modal when the "X" button is clicked
+        closeModalBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close the modal if the user clicks outside of it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
+
+

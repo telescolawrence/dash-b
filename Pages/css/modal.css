@@ -1,0 +1,34 @@
+/* Styles for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 5px;
+    width: 70%; /* Increase the width for larger forms */
+    max-height: 80%; /* Add max-height for scroll bar */
+    overflow-y: auto; /* Add a vertical scroll bar */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+/* Styles for the close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Style for the form */
+form {
+    padding: 20px;
+}
