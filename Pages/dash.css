@@ -156,25 +156,25 @@ padding: 5px;
     border-style: double;
     border-radius: 12px;
     border-width: medium;
-    padding: 25px;
-    height: 4px;
-    width: 105px;
+   
+    height: 65px;
+    width: 170px;
 }
 .left-bottom-two{
     border-style: double;
     border-radius: 12px;
     border-width: medium;
-    padding: 25px;
-    height: 4px;
-    width: 105px;
+   
+    height: 65px;
+    width: 170px;
     margin-left: 5px;
 }
 .left-bottom-three{
     border-style: double;
     border-radius: 12px;
     border-width: medium;
-    padding: 25px;
-    height: 4px;
-    width: 25%;
+    
+    height: 65px;
+    width: 170px;
     margin-left: 5px;
 }
