@@ -10,9 +10,9 @@ margin-top: 0px;
 
 }
 .header{
-    border-style: double;
+    /* border-style: double;
     border-radius: 12px;
-    border-width: medium;
+    border-width: medium; */
     height: 64px;
     
 }
@@ -99,6 +99,12 @@ margin-bottom: 10px;
 padding: 5px;
 height: 300px;
 margin-top: 10px;
+}
+h3{
+    margin-left: 70px;
+    text-decoration: underline;
+    font-size: 20px;
+    color: white;
 }
 .middle-bottom{
 border-style: double;
