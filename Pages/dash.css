@@ -2,7 +2,7 @@ body{
     /* border: 3px solid #73AD21; */
 }
 .body{
-background-color: #43326c;
+background-color: #ffffff;
 display: flex;
 /* border: 3px solid #73AD21; */
 margin-bottom: 2px;
@@ -36,13 +36,20 @@ border-width: medium;
 border-radius: 12px;
 padding: 60px;
 height: 70px;
-
-
+background-color:  #43326c; /* For browsers that do not support gradients */
+background-image: linear-gradient(to left, purple,  black );
+/* box-shadow: 6px 6px 5px rgb(195, 43, 195); */
 }
+
+
+
+
 .right-middle{
 display: flex;
 margin-top: 10px;
 margin-bottom: 10px;
+
+/* background-image: linear-gradient(to left, purple,  black ); */
 }
 .right-middle-one{
 border-style: double;
@@ -52,7 +59,10 @@ padding: 25px;
 height: 4px;
 width: 105px;
 
+background-color:  #43326c; /* For browsers that do not support gradients */
+background-image: linear-gradient(to left, purple,  black );
 }
+
 .right-middle-two{
 border-style: double;
 border-radius: 12px;
@@ -61,6 +71,9 @@ padding: 25px;
 height: 4px;
 width: 25%;
 margin-left: 5px;
+background-color:  #43326c; /* For browsers that do not support gradients */
+background-image: linear-gradient(to left, purple,  black );
+
 }
 .right-middle-three{
 border-style: double;
@@ -70,7 +83,10 @@ padding: 25px;
 height: 4px;
 width: 25%;
 margin-left: 5px;
+background-color:  #43326c; /* For browsers that do not support gradients */
+background-image: linear-gradient(to left, purple,  black );
 }
+
 .right-bottom{
 border-style: double;
 border-width: medium;
@@ -78,6 +94,8 @@ margin-bottom: 30px;
 border-radius: 12px;
 padding: 80px;
 height: 55px;
+background-color:  #43326c; /* For browsers that do not support gradients */
+background-image: linear-gradient(to left, purple,  black );
 }
 .middle{
 /* border-style: double;
@@ -99,6 +117,7 @@ margin-bottom: 10px;
 padding: 5px;
 height: 300px;
 margin-top: 10px;
+background-image: linear-gradient(black, purple);
 }
 h3{
     margin-left: 70px;
@@ -113,6 +132,7 @@ border-radius: 12px;
 margin-bottom: 30px;
 padding: 5px;
 height: 150px;
+background-image: linear-gradient( purple, black);
 }
 .left{
    
@@ -133,6 +153,8 @@ height: 150px;
 border-width: medium;
 padding: 60px;
 height: 70px;
+background-color: #43326c; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, purple , black);
 }
 .left-middle{
     border-style: double;
@@ -142,6 +164,8 @@ height: 70px;
     margin-top: 10px;
     padding: 80px;
     height: 35px;
+    background-color: #43326c; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, purple , black);
 }
 .left-bottom{
     /* border-style: double;
@@ -156,6 +180,8 @@ padding: 5px;
     border-style: double;
     border-radius: 12px;
     border-width: medium;
+    background-color: #43326c; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, purple , black);
    
     height: 65px;
     width: 170px;
@@ -164,7 +190,8 @@ padding: 5px;
     border-style: double;
     border-radius: 12px;
     border-width: medium;
-   
+    background-color:  #43326c; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, purple , black);
     height: 65px;
     width: 170px;
     margin-left: 5px;
@@ -173,8 +200,15 @@ padding: 5px;
     border-style: double;
     border-radius: 12px;
     border-width: medium;
-    
+    background-color: #43326c; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, purple , black);
     height: 65px;
     width: 170px;
     margin-left: 5px;
+}
+h4{
+    margin-left: 12px;
+    color: white;
+    
+
 }
