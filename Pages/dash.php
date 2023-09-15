@@ -110,6 +110,12 @@ foreach ($scoreshighRound1 as $teamName => $highscoreRound1) {
 
 
 
+
+// elementary scores
+$sql = "SELECT * FROM elem_scores_round1";
+
+// Execute the query
+$result = $conn->query($sql);
 ?>
 
 
@@ -143,6 +149,9 @@ foreach ($scoreshighRound1 as $teamName => $highscoreRound1) {
 
     tr:nth-child(even) {
         background-color: #f2f2f2;
+    }
+    .elementary-table{
+        padding: 8px;
     }
 </style>
 
@@ -185,6 +194,11 @@ foreach ($scoreshighRound1 as $teamName => $highscoreRound1) {
     <div class="middle">
         <div class="middle-top" >
             <h3>Leaderboard</h3>
+             <!-- Table Titles -->
+        <h4 id="tableTitle1">Elementary School</h4>
+        <h4 id="tableTitle2" style="display: none;">Middle School</h4>
+        <h4 id="tableTitle3" style="display: none;">High School</h4>
+
             <table border="1" id="elem_results">
     
         <thead>
@@ -251,7 +265,49 @@ foreach ($scoreshighRound1 as $teamName => $highscoreRound1) {
     </div >
     <div class="left" >
         <div class="left-top">
+        <table border="1" class="elementary-table">
+        <thead>
+            <tr>
+                <th>Team Name</th>
+                <!-- <th>Group Name</th> -->
+                <th>Launching Points</th>
+                <th>Flight Path Points</th>
+                <th>Alliance victory Points</th>
+                <th>Acticate Alliance System points</th>
+                <th>Space time energy transfer</th>
+                <th>Alliance route planning</th>
+                <th>round score</th>
+                <!-- Add more table headers for other columns -->
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            // Check if there are rows in the result
+            if ($result->num_rows > 0) {
+                // Loop through each row of data
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    // echo "<td>" . $row["team_name"] . "</td>";
+                    echo "<td>" . $row["group_name"] . "</td>";
+                    echo "<td>" . $row["launching_points"] . "</td>";
+                    echo "<td>" . $row["flight_path_points"] . "</td>";
+                    echo "<td>" . $row["alliance_victory_points"] . "</td>";
+                    echo "<td>" . $row["activate_alliance_system_points"] . "</td>";
+                    echo "<td>" . $row["space_time_energy_transfer_points"] . "</td>";
+                    echo "<td>" . $row["alliance_route_planning_points"] . "</td>";
+                    echo "<td>" . $row["single_round_score"] . "</td>";
+                    // Add more table cells for other columns as needed
+                    echo "</tr>";
+                }
+            } else {
+                echo "<tr><td colspan='4'>No data available</td></tr>";
+            }
 
+            // Close the database connection
+            $conn->close();
+            ?>
+        </tbody>
+    </table>
         </div>
         <div class="left-middle">
 
@@ -275,40 +331,39 @@ foreach ($scoreshighRound1 as $teamName => $highscoreRound1) {
 </div>
 </body>
 <script>
-    // Function to toggle table visibility
-// function toggleTables() {
-//     var table1 = document.getElementById("elem_results");
-//     var table2 = document.getElementById("mid_results");
+   // Function to toggle table visibility and titles
+function toggleTablesAndTitles() {
+    var elemTable = document.getElementById("elem_results");
+    var middleTable = document.getElementById("mid_results");
+    var highTable = document.getElementById("high_results");
 
-//     if (table1.style.display === "none") {
-//         table1.style.display = "table";
-//         table2.style.display = "none";
-//     } else {
-//         table1.style.display = "none";
-//         table2.style.display = "table";
-//     }
-// }
+    var elemTitle = document.getElementById("tableTitle1");
+    var middleTitle = document.getElementById("tableTitle2");
+    var highTitle = document.getElementById("tableTitle3");
 
-// Function to toggle table visibility
-function toggleTables() {
-    var table1 = document.getElementById("elem_results");
-    var table2 = document.getElementById("mid_results");
-    var table3 = document.getElementById("high_results");
+    if (elemTable.style.display === "table") {
+        elemTable.style.display = "none";
+        middleTable.style.display = "table";
 
-    if (table1.style.display === "table") {
-        table1.style.display = "none";
-        table2.style.display = "table";
-    } else if (table2.style.display === "table") {
-        table2.style.display = "none";
-        table3.style.display = "table";
+        elemTitle.style.display = "none";
+        middleTitle.style.display = "block";
+    } else if (middleTable.style.display === "table") {
+        middleTable.style.display = "none";
+        highTable.style.display = "table";
+
+        middleTitle.style.display = "none";
+        highTitle.style.display = "block";
     } else {
-        table3.style.display = "none";
-        table1.style.display = "table";
+        highTable.style.display = "none";
+        elemTable.style.display = "table";
+
+        highTitle.style.display = "none";
+        elemTitle.style.display = "block";
     }
 }
 
-// Set the interval to switch tables every 5 seconds (adjust as needed)
-setInterval(toggleTables, 5000); // Switch every 5 seconds (5000 milliseconds)
+// Set the interval to switch tables and titles every 5 seconds (adjust as needed)
+setInterval(toggleTablesAndTitles, 5000); // Switch every 5 seconds (5000 milliseconds)
 
 </script>
 </html>
