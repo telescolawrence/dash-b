@@ -117,13 +117,16 @@ $conn->close();
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
-                        <li class="active" ><a href="dashboard.php" ><i class="fa fa-home"></i>Dashboard</a>
+                        <li class="active" ><a href="dashboard.php" ><i class="fa fa-home"></i>Home</a>
                         </li>
                         <li><a data-toggle="tab" href="#info"><i class="fa fa-list-alt"></i>Elementary School</a>
                         </li>
                         <li><a data-toggle="tab" href="#infor"><i class="fa fa-edit"></i>Middle School</a>
                         </li>
                         <li><a data-toggle="tab" href="#inform"><i class="fa fa-user-secret"></i>High School</a>
+                        <li>
+                        <li><a  href="dash.php" target="blank"><i class="fa fa-user-secret"></i>Dashboard</a>
+                        </li>
                     </ul>
                     <div class="tab-content custom-menu-content">
                         <div id="info" class="tab-pane notika-tab-menu-bg animated flipInX">
@@ -187,13 +190,7 @@ if ($result->num_rows > 0) {
 // Close the database connection
 $conn->close();
 ?>
-        <table>
-<td>
-<?php echo "<td>" . $row['team_name'] . "</td>"; ?>
-    <tr></tr>
-</td>
-
-        </table>
+        
 
     <!-- Add a section for displaying performance metrics here -->
 

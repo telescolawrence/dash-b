@@ -38,6 +38,8 @@ border-width: medium;
 border-radius: 12px;
 padding: 6px;
 height:190px;
+resize: both;
+overflow: auto;
 width: 500;
 background-color:  #43326c; /* For browsers that do not support gradients */
 background-image: linear-gradient(to left, purple,  black );
