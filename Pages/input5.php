@@ -155,7 +155,7 @@ if(isset($_POST['submit'])){
         <h2>Score Input Form <br>Round 1 </h2>
         <h3>High School</h3>
         <button id="openModalBtn" class="open one">Open Form</button>
-        <button class="open two"><a href="round1.php">Back</a></button> 
+        <button class="open two"><a href="round1high.php">Back</a></button> 
     </div>
     <!-- The Modal -->
     <div id="scoreModal" class="modal">

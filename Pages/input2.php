@@ -242,6 +242,7 @@ if(isset($_POST['submit'])){
                 modal.style.display = "none";
             }
         }
+        
     </script>
 </body>
 </html>

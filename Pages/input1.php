@@ -135,7 +135,7 @@ if(isset($_POST['submit'])){
         }
         .display{
             border-style: double;
-            border-width: medium;
+            border-width: medium;  
             border-radius: 12px;
             text-align: center;
             margin:200px;
@@ -157,7 +157,7 @@ if(isset($_POST['submit'])){
         <h2>Score Input Form <br>Round 1 </h2>
         <h3>Elementary School</h3>
         <button id="openModalBtn" class="open one">Open Form</button>
-        <button class="open two"><a href="round1.php">Back</a></button> 
+        <button class="open two" onclick="goBack()">Back</button> 
     </div>
    
 
@@ -241,6 +241,9 @@ if(isset($_POST['submit'])){
             if (event.target == modal) {
                 modal.style.display = "none";
             }
+        }
+        function goBack() {
+            window.history.back(); // Go back to the previous page
         }
     </script>
 </body>
