@@ -186,6 +186,20 @@ transition: opacity 1s;
 .inactive {
     opacity: 0;
 }
+.keys{
+    display: inline-block;
+    animation: marquee 30s linear infinite;
+    
+}
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
 </style>
 
 </head>
@@ -305,12 +319,12 @@ transition: opacity 1s;
             <tr>
                 <th>Team Name</th>
                 <!-- <th>Group Name</th> -->
-                <th>Launching Points</th>
-                <th>Flight Path Points</th>
-                <th>Alliance victory Points</th>
-                <th>Acticate Alliance System points</th>
-                <th>Space time energy transfer</th>
-                <th>Alliance route planning</th>
+                <th>L.P</th>
+                <th>F.P.P</th>
+                <th>A.V.P</th>
+                <th>A.A.S.P</th>
+                <th>S.T.E.T</th>
+                <th>A.R.P</th>
                 <th>round score</th>
                 <!-- Add more table headers for other columns -->
             </tr>
@@ -372,15 +386,15 @@ transition: opacity 1s;
         <table border="1" class="elem-table" width: 98%;>
         <thead>
             <tr>
-                <th>Team Name</th>
+            <th>T.N</th>
                 <!-- <th>Group Name</th> -->
-                <th>Launching Points</th>
-                <th>Flight Path Points</th>
-                <th>Alliance victory Points</th>
-                <th>Acticate Alliance System points</th>
-                <th>Space time energy transfer</th>
-                <th>Alliance route planning</th>
-                <th>round score</th>
+                <th>L.P</th>
+                <th>F.P.P</th>
+                <th>A.V.P</th>
+                <th>A.A.S.P</th>
+                <th>S.T.E.T</th>
+                <th>A.R.P</th>
+                <th>S</th>
                 <!-- Add more table headers for other columns -->
             </tr>
         </thead>
@@ -417,15 +431,15 @@ transition: opacity 1s;
         <table border="1" class="mid-table" width: 98%;>
         <thead>
             <tr>
-                <th>Team Name</th>
+            <th>T.N</th>
                 <!-- <th>Group Name</th> -->
-                <th>Launching Points</th>
-                <th>Flight Path Points</th>
-                <th>Alliance victory Points</th>
-                <th>Acticate Alliance System points</th>
-                <th>Space time energy transfer</th>
-                <th>Alliance route planning</th>
-                <th>round score</th>
+                <th>L.P</th>
+                <th>F.P.P</th>
+                <th>A.V.P</th>
+                <th>A.A.S.P</th>
+                <th>S.T.E.T</th>
+                <th>A.R.P</th>
+                <th>S</th>
                 <!-- Add more table headers for other columns -->
             </tr>
         </thead>
@@ -462,15 +476,15 @@ transition: opacity 1s;
         <table border="1" class="high-table" width: 98%;>
         <thead>
             <tr>
-                <th>Team Name</th>
+            <th>T.N</th>
                 <!-- <th>Group Name</th> -->
-                <th>Launching Points</th>
-                <th>Flight Path Points</th>
-                <th>Alliance victory Points</th>
-                <th>Acticate Alliance System points</th>
-                <th>Space time energy transfer</th>
-                <th>Alliance route planning</th>
-                <th>round score</th>
+                <th>L.P</th>
+                <th>F.P.P</th>
+                <th>A.V.P</th>
+                <th>A.A.S.P</th>
+                <th>S.T.E.T</th>
+                <th>A.R.P</th>
+                <th>S</th>
                 <!-- Add more table headers for other columns -->
             </tr>
         </thead>
@@ -503,6 +517,21 @@ transition: opacity 1s;
         </tbody>
     </table>
         </div>
+    </div>
+    <div class="key">
+            <h4  class="keys">
+                key
+                T.M-team name ,  
+                L.P-Launching Points,
+                F.P.P-Flight Path Points,
+                A.V.P-Alliance victory Points,
+                A.A.S.P-Activate Alliance System Points,
+                 S.T.E.T-Space Time Energy Transfer,    <br>
+                 ARP-Alliance Route Planning,
+                 S-Scores
+
+            </h4>
+           
     </div>
 </span>
 </body>

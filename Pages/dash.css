@@ -23,21 +23,22 @@ img{
     
 }
 .right{
-/* border-style: double;
-border-width: medium; */
+/* border-style: double; */
+/* border-width: medium;  */
 margin-bottom: 30px;
 padding: 10px;
 /* margin: 0px; */
 height: 470px;
-width: 40%;
+width: 500px;
 
 }
 .right-top{
 border-style: double;
 border-width: medium;
 border-radius: 12px;
-padding: 60px;
-height: 70px;
+padding: 6px;
+height:190px;
+width: 500;
 background-color:  #43326c; /* For browsers that do not support gradients */
 background-image: linear-gradient(to left, purple,  black );
 /* box-shadow: 6px 6px 5px rgb(195, 43, 195); */
@@ -60,6 +61,7 @@ border-width: medium;
 padding: 25px;
 height: 4px;
 width: 105px;
+
 
 background-color:  #43326c; /* For browsers that do not support gradients */
 background-image: linear-gradient(to left, purple,  black );
@@ -94,8 +96,8 @@ border-style: double;
 border-width: medium;
 margin-bottom: 30px;
 border-radius: 12px;
-padding: 80px;
-height: 55px;
+padding: 6px;
+height: 185px;
 background-color:  #43326c; /* For browsers that do not support gradients */
 background-image: linear-gradient(to left, purple,  black );
 }
@@ -153,9 +155,9 @@ background-image: linear-gradient( purple, black);
     border-style: double;
     border-radius: 12px;
 border-width: medium;
-padding: 60px;
+padding: 6px;
 overflow-x: auto;
-height: 70px;
+height: 180px;
 background-color: #43326c; /* For browsers that do not support gradients */
   background-image: linear-gradient(to right, purple , black);
 }
@@ -227,7 +229,7 @@ h4{
     border-style: double;
     border-width: medium;
     border-radius: 12px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     overflow-x: auto;
     padding: 5px;
     height: 450px;
@@ -238,7 +240,7 @@ h4{
     border-style: double;
     border-width: medium;
     border-radius: 12px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     padding: 5px;
     height: 450px;
     overflow-x: auto;
@@ -250,11 +252,22 @@ h4{
     border-style: double;
     border-width: medium;
     border-radius: 12px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     padding: 5px;
     height: 450px;
     overflow-x: auto;
     width: 430px;
     margin-left: 5px;
     background-image: linear-gradient( purple, black);
+}
+.key{
+    border-style: double;
+    border-radius: 12px;
+    border-width: medium;
+    background-color: #43326c; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right, purple , black);
+    height: 55px;
+    width: 1340px;
+    overflow: hidden;
+    /* white-space: nowrap; */
 }
