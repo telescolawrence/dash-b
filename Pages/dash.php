@@ -116,6 +116,27 @@ $sql = "SELECT * FROM elem_scores_round1";
 
 // Execute the query
 $result = $conn->query($sql);
+
+
+// elem scores
+$sql = "SELECT * FROM elem_scores_round1";
+
+// Execute the query
+$results = $conn->query($sql);
+
+// middle scores
+$sql = "SELECT * FROM middle_scores_round1";
+
+// Execute the query
+$resultsmid = $conn->query($sql);
+
+
+// middle scores
+$sql = "SELECT * FROM high_scores_round1";
+
+// Execute the query
+$resultshigh = $conn->query($sql);
+
 ?>
 
 
@@ -153,6 +174,18 @@ $result = $conn->query($sql);
     .elementary-table{
         padding: 8px;
     }
+span{
+    position: absolute;
+transition: opacity 1s;
+}
+
+    .active {
+    opacity: 1;
+}
+
+.inactive {
+    opacity: 0;
+}
 </style>
 
 </head>
@@ -161,6 +194,8 @@ $result = $conn->query($sql);
     <div class="header">
         <img src="afri1.jpeg" alt="loading">
     </div>
+<span class="active"  id="span1">
+
 
 <div class="body">
 
@@ -304,7 +339,7 @@ $result = $conn->query($sql);
             }
 
             // Close the database connection
-            $conn->close();
+            // $conn->close();
             ?>
         </tbody>
     </table>
@@ -329,6 +364,147 @@ $result = $conn->query($sql);
 
     </div>
 </div>
+        </span>
+<span id="span2" >
+    <div class="page2">
+
+        <div class="page2-right">
+        <table border="1" class="elem-table" width: 98%;>
+        <thead>
+            <tr>
+                <th>Team Name</th>
+                <!-- <th>Group Name</th> -->
+                <th>Launching Points</th>
+                <th>Flight Path Points</th>
+                <th>Alliance victory Points</th>
+                <th>Acticate Alliance System points</th>
+                <th>Space time energy transfer</th>
+                <th>Alliance route planning</th>
+                <th>round score</th>
+                <!-- Add more table headers for other columns -->
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            // Check if there are rows in the result
+            if ($results->num_rows > 0) {
+                // Loop through each row of data
+                while ($row = $results->fetch_assoc()) {
+                    echo "<tr>";
+                    // echo "<td>" . $row["team_name"] . "</td>";
+                    echo "<td>" . $row["group_name"] . "</td>";
+                    echo "<td>" . $row["launching_points"] . "</td>";
+                    echo "<td>" . $row["flight_path_points"] . "</td>";
+                    echo "<td>" . $row["alliance_victory_points"] . "</td>";
+                    echo "<td>" . $row["activate_alliance_system_points"] . "</td>";
+                    echo "<td>" . $row["space_time_energy_transfer_points"] . "</td>";
+                    echo "<td>" . $row["alliance_route_planning_points"] . "</td>";
+                    echo "<td>" . $row["single_round_score"] . "</td>";
+                    // Add more table cells for other columns as needed
+                    echo "</tr>";
+                }
+            } else {
+                echo "<tr><td colspan='4'>No data available</td></tr>";
+            }
+
+            // Close the database connection
+            // $conn->close();
+            ?>
+        </tbody>
+    </table>
+        </div>
+        <div class="page2-left">
+        <table border="1" class="mid-table" width: 98%;>
+        <thead>
+            <tr>
+                <th>Team Name</th>
+                <!-- <th>Group Name</th> -->
+                <th>Launching Points</th>
+                <th>Flight Path Points</th>
+                <th>Alliance victory Points</th>
+                <th>Acticate Alliance System points</th>
+                <th>Space time energy transfer</th>
+                <th>Alliance route planning</th>
+                <th>round score</th>
+                <!-- Add more table headers for other columns -->
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            // Check if there are rows in the result
+            if ($resultsmid->num_rows > 0) {
+                // Loop through each row of data
+                while ($row = $resultsmid->fetch_assoc()) {
+                    echo "<tr>";
+                    // echo "<td>" . $row["team_name"] . "</td>";
+                    echo "<td>" . $row["group_name"] . "</td>";
+                    echo "<td>" . $row["launching_points"] . "</td>";
+                    echo "<td>" . $row["flight_path_points"] . "</td>";
+                    echo "<td>" . $row["alliance_victory_points"] . "</td>";
+                    echo "<td>" . $row["activate_alliance_system_points"] . "</td>";
+                    echo "<td>" . $row["space_time_energy_transfer_points"] . "</td>";
+                    echo "<td>" . $row["alliance_route_planning_points"] . "</td>";
+                    echo "<td>" . $row["single_round_score"] . "</td>";
+                    // Add more table cells for other columns as needed
+                    echo "</tr>";
+                }
+            } else {
+                echo "<tr><td colspan='4'>No data available</td></tr>";
+            }
+
+            // Close the database connection
+           // $conn->close();
+            ?>
+        </tbody>
+    </table>
+        </div>
+        <div class="page2-left2">
+        <table border="1" class="high-table" width: 98%;>
+        <thead>
+            <tr>
+                <th>Team Name</th>
+                <!-- <th>Group Name</th> -->
+                <th>Launching Points</th>
+                <th>Flight Path Points</th>
+                <th>Alliance victory Points</th>
+                <th>Acticate Alliance System points</th>
+                <th>Space time energy transfer</th>
+                <th>Alliance route planning</th>
+                <th>round score</th>
+                <!-- Add more table headers for other columns -->
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            // Check if there are rows in the result
+            if ($resultshigh->num_rows > 0) {
+                // Loop through each row of data
+                while ($row = $resultshigh->fetch_assoc()) {
+                    echo "<tr>";
+                    // echo "<td>" . $row["team_name"] . "</td>";
+                    echo "<td>" . $row["group_name"] . "</td>";
+                    echo "<td>" . $row["launching_points"] . "</td>";
+                    echo "<td>" . $row["flight_path_points"] . "</td>";
+                    echo "<td>" . $row["alliance_victory_points"] . "</td>";
+                    echo "<td>" . $row["activate_alliance_system_points"] . "</td>";
+                    echo "<td>" . $row["space_time_energy_transfer_points"] . "</td>";
+                    echo "<td>" . $row["alliance_route_planning_points"] . "</td>";
+                    echo "<td>" . $row["single_round_score"] . "</td>";
+                    // Add more table cells for other columns as needed
+                    echo "</tr>";
+                }
+            } else {
+                echo "<tr><td colspan='4'>No data available</td></tr>";
+            }
+
+            // Close the database connection
+            $conn->close();
+            ?>
+        </tbody>
+    </table>
+        </div>
+    </div>
+</span>
 </body>
 <script>
    // Function to toggle table visibility and titles
@@ -364,6 +540,27 @@ function toggleTablesAndTitles() {
 
 // Set the interval to switch tables and titles every 5 seconds (adjust as needed)
 setInterval(toggleTablesAndTitles, 5000); // Switch every 5 seconds (5000 milliseconds)
+
+
+
+
+const span1 = document.getElementById("span1");
+const span2 = document.getElementById("span2");
+
+setInterval(() => {
+    if (span1.classList.contains("active")) {
+        span1.classList.remove("active");
+        span1.classList.add("inactive");
+        span2.classList.remove("inactive");
+        span2.classList.add("active");
+    } else {
+        span2.classList.remove("active");
+        span2.classList.add("inactive");
+        span1.classList.remove("inactive");
+        span1.classList.add("active");
+    }
+}, 5000); // Switch spans every 3 seconds (adjust as needed)
+
 
 </script>
 </html>
