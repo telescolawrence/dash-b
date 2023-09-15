@@ -186,8 +186,8 @@ if(isset($_POST['submit'])){
                 <label for="activate_alliance_system_points">Activate the Alliance System (50 points):</label>
                 <input type="number" id="activate_alliance_system_points" name="activate_alliance_system_points" min="0" required><br><br>
             
-                <label for="space_time_energy_transfer_points">Space-Time Energy Transfer (Out of 20 points):</label>
-                <input type="number" id="space_time_energy_transfer_points" name="space_time_energy_transfer_points" min="0" required><br><br>
+                <!-- <label for="space_time_energy_transfer_points">Space-Time Energy Transfer (Out of 20 points):</label> -->
+                <!-- <input type="number" id="space_time_energy_transfer_points" name="space_time_energy_transfer_points" min="0" required><br><br> -->
             
                 <h3>Additional Task</h3>
                 <label for="alliance_route_planning_points">Alliance Route Planning (60 points):</label>
