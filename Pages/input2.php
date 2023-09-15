@@ -5,30 +5,30 @@
 
 if(isset($_POST['submit'])){
         // Retrieve data from the form fields
-        $team_name = $_POST["team_name"];
-        $group_name = $_POST["group_name"];
-        $launching_points = intval($_POST["launching_points"]);
-        $flight_path_points = intval($_POST["flight_path_points"]);
-        $alliance_victory_points = intval($_POST["alliance_victory_points"]);
-        $activate_alliance_system_points = intval($_POST["activate_alliance_system_points"]);
-        $space_time_energy_transfer_points = intval($_POST["space_time_energy_transfer_points"]);
-        $alliance_route_planning_points = intval($_POST["alliance_route_planning_points"]);
-        $remaining_time_minutes = intval($_POST["remaining_time_minutes"]);
-        $reset_deduction_points = intval($_POST["reset_deduction_points"]);
-        // $single_round_score = intval($_POST["single_round_score"]); 
-        // Calculate the total score based on the provided values
-        $single_round_score = $launching_points + $flight_path_points + $alliance_victory_points +
-                       $activate_alliance_system_points + $space_time_energy_transfer_points +
-                       $alliance_route_planning_points + $remaining_time_minutes - $reset_deduction_points;
-        
-    
-        // SQL query to insert data into the scores table
-        $sql = "INSERT INTO elem_scores_round2 (team_name, group_name, launching_points, flight_path_points, alliance_victory_points, 
-                activate_alliance_system_points, space_time_energy_transfer_points, alliance_route_planning_points, 
-                remaining_time_minutes, reset_deduction_points, single_round_score) 
-                VALUES ('$team_name', '$group_name', $launching_points, $flight_path_points, $alliance_victory_points, 
-                $activate_alliance_system_points, $space_time_energy_transfer_points, $alliance_route_planning_points, 
-                $remaining_time_minutes, $reset_deduction_points, $single_round_score)";
+         $team_name = $_POST["team_name"];
+         $group_name = $_POST["group_name"];
+         $launching_points = intval($_POST["launching_points"]);
+         $flight_path_points = intval($_POST["flight_path_points"]);
+         $alliance_victory_points = intval($_POST["alliance_victory_points"]);
+         $activate_alliance_system_points = intval($_POST["activate_alliance_system_points"]);
+         // $space_time_energy_transfer_points = intval($_POST["space_time_energy_transfer_points"]);
+         $alliance_route_planning_points = intval($_POST["alliance_route_planning_points"]);
+         $remaining_time_minutes = intval($_POST["remaining_time_minutes"]);
+         $reset_deduction_points = intval($_POST["reset_deduction_points"]);
+         // $single_round_score = intval($_POST["single_round_score"]); 
+         // Calculate the total score based on the provided values
+         $single_round_score = $launching_points + $flight_path_points + $alliance_victory_points +
+                        $activate_alliance_system_points + $space_time_energy_transfer_points +
+                        $alliance_route_planning_points + $remaining_time_minutes - $reset_deduction_points;
+         
+     
+         // SQL query to insert data into the scores table
+         $sql = "INSERT INTO elem_scores_round1 (team_name, group_name, launching_points, flight_path_points, alliance_victory_points, 
+                 activate_alliance_system_points, alliance_route_planning_points, 
+                 remaining_time_minutes, reset_deduction_points, single_round_score) 
+                 VALUES ('$team_name', '$group_name', $launching_points, $flight_path_points, $alliance_victory_points, 
+                 $activate_alliance_system_points, $alliance_route_planning_points, 
+                 $remaining_time_minutes, $reset_deduction_points, $single_round_score)";
     
         if ($conn->query($sql) === TRUE) {
             echo "Data inserted successfully.";
