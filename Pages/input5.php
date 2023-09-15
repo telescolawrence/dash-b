@@ -81,14 +81,82 @@ if(isset($_POST['submit'])){
         form {
             padding: 20px;
         }
+        .open{
+            border-radius: 8px;
+            background-color: purple; /* Green */
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+
+        }
+        .one {
+        background-color: white; 
+        color: black; 
+        border: 2px solid black;
+        width: 50%;
+        /* margin-left: 200px;         */
+        }
+
+        .one:hover {
+        background-color: purple;
+        color: white;
+        }
+        .two {
+        background-color: white; 
+        color: black; 
+        width: 50%;
+        border: 2px solid black;
+        /* margin-left: 200px; */
+        }
+
+        .two:hover {
+        background-color: purple;
+        color: white;
+        }
+        h3{
+            /* margin-left: 400px; */
+            line-height: 100px; /* Center vertically (adjust the value as needed) */
+            color: black; /* Make the text purple */
+            font-size: 40px;
+        }
+        h2{
+            /* margin-left: 400px; */
+            font-size: 30px;
+
+
+        }
+        .display{
+            border-style: double;
+            border-width: medium;
+            border-radius: 12px;
+            text-align: center;
+            margin:200px;
+            margin-bottom:0px;
+            margin-top:110px;
+            padding: 6px;
+            height:400px;
+            resize: both;
+            overflow: auto;
+            width: 200;
+            background-color:  #43326c; /* For browsers that do not support gradients */
+            background-image: linear-gradient(to left, purple,  black );
+        }
     </style>
 </head>
 <body>
-    <h2>Score Input Form round 1 </h2>
-    <h3>Elementary School</h3>
-    <button id="openModalBtn">Open Form</button>
-    <button ><a href="round1.php">Back</a></button> 
-
+<div class="display">
+        <h2>Score Input Form <br>Round 1 </h2>
+        <h3>High School</h3>
+        <button id="openModalBtn" class="open one">Open Form</button>
+        <button class="open two"><a href="round1.php">Back</a></button> 
+    </div>
     <!-- The Modal -->
     <div id="scoreModal" class="modal">
         <!-- Modal content -->
