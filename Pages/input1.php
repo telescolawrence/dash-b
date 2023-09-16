@@ -18,8 +18,7 @@ if(isset($_POST['submit'])){
         // $single_round_score = intval($_POST["single_round_score"]); 
         // Calculate the total score based on the provided values
         $single_round_score = $launching_points + $flight_path_points + $alliance_victory_points +
-                       $activate_alliance_system_points + $space_time_energy_transfer_points +
-                       $alliance_route_planning_points + $remaining_time_minutes - $reset_deduction_points;
+                       $activate_alliance_system_points + $alliance_route_planning_points + $remaining_time_minutes - $reset_deduction_points;
         
     
         // SQL query to insert data into the scores table
@@ -174,16 +173,16 @@ if(isset($_POST['submit'])){
                 <input type="text" id="group_name" name="group_name" required><br><br>
             
                 <h3>Basic Task</h3>
-                <label for="launching_points">Successful Launching (50 points):</label>
+                <label for="launching_points">Successful Launching (5 points):</label>
                 <input type="number" id="launching_points" name="launching_points" min="0" required><br><br>
             
                 <label for="flight_path_points">Flight Path (Out of 50 points):</label>
                 <input type="number" id="flight_path_points" name="flight_path_points" min="0" required><br><br>
             
-                <label for="alliance_victory_points">Alliance Victory Reunion (Out of 70 points):</label>
+                <label for="alliance_victory_points">Alliance Victory Reunion (Out of 20 points):</label>
                 <input type="number" id="alliance_victory_points" name="alliance_victory_points" min="0" required><br><br>
             
-                <label for="activate_alliance_system_points">Activate the Alliance System (50 points):</label>
+                <label for="activate_alliance_system_points">Activate the Alliance System (20 points):</label>
                 <input type="number" id="activate_alliance_system_points" name="activate_alliance_system_points" min="0" required><br><br>
             
                 <!-- <label for="space_time_energy_transfer_points">Space-Time Energy Transfer (Out of 20 points):</label> -->

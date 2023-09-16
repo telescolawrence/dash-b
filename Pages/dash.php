@@ -40,7 +40,7 @@ foreach ($scoresRound1 as $teamName => $scoreRound1) {
 
 
 
-// CODE TO DISPLAY MIDDLE SCHOOL RESULTS
+// CODE TO DISPLAY MIDDLE SCHOOL RESULTS round 1
 $sqlmidRound1 = "SELECT team_name, single_round_score AS middle_score_round1 FROM    middle_scores_round1";
 
 // SQL query to retrieve scores from round 2
@@ -59,6 +59,8 @@ $scoresmidRound2 = array();
 while ($row = $midresultRound2->fetch_assoc()) {
     $scoresmidRound2[$row['team_name']] = $row['mid_score_round2'];
 }
+
+
 
 
 // Calculate average scores for teams with the same name
@@ -120,20 +122,25 @@ $result = $conn->query($sql);
 
 // elem scores
 $sql = "SELECT * FROM elem_scores_round1";
-
 // Execute the query
 $results = $conn->query($sql);
 
+
+// elem scores
+$sql = "SELECT * FROM elem_scores_round2";
+// Execute the query
+$resultselem2 = $conn->query($sql);
+  
+
 // middle scores
 $sql = "SELECT * FROM middle_scores_round1";
-
 // Execute the query
 $resultsmid = $conn->query($sql);
 
 
+
 // middle scores
 $sql = "SELECT * FROM high_scores_round1";
-
 // Execute the query
 $resultshigh = $conn->query($sql);
 
@@ -216,7 +223,31 @@ transition: opacity 1s;
  
     <div class="right" >
         <div class="right-top">
+        <?php
+@include 'config.php';
 
+// SQL query to retrieve data from the players table
+$sql = "SELECT * FROM players";
+$result = $conn->query($sql);
+
+// Check if there are any records
+if ($result->num_rows > 0) {
+    echo "<table border='1'>";
+    echo "<tr><th>Team Name</th><th>Player One</th><th>Player Two</th><th>Score</th></tr>";
+
+    while ($row = $result->fetch_assoc()) {
+    
+        echo "<tr>";
+        echo "<td>" . $row['team_name'] . "</td>";
+        echo "<td>" . $row['player_one'] . "</td>";
+        echo "<td>" . $row['player_two'] . "</td>";
+        echo "<td>" . $row['score'] . "</td>";
+        echo "</tr>";
+    }
+}
+// Close the database connection
+$conn->close();
+?>
         </div>
 
         <div class="right-middle" >
@@ -381,7 +412,7 @@ transition: opacity 1s;
     <div class="page2">
 
         <div class="page2-right">
-        <table border="1" class="elem-table" width: 98%;>
+        <table border="1" class="elem-table" id="elem1" width: 98%;>
         <thead>
             <tr>
             <th>T.N</th>
@@ -401,6 +432,47 @@ transition: opacity 1s;
             if ($results->num_rows > 0) {
                 // Loop through each row of data
                 while ($row = $results->fetch_assoc()) {
+                    echo "<tr>";
+                    // echo "<td>" . $row["team_name"] . "</td>";
+                    echo "<td>" . $row["group_name"] . "</td>";
+                    echo "<td>" . $row["launching_points"] . "</td>";
+                    echo "<td>" . $row["flight_path_points"] . "</td>";
+                    echo "<td>" . $row["alliance_victory_points"] . "</td>";
+                    echo "<td>" . $row["activate_alliance_system_points"] . "</td>";
+                    echo "<td>" . $row["alliance_route_planning_points"] . "</td>";
+                    echo "<td>" . $row["single_round_score"] . "</td>";
+                    // Add more table cells for other columns as needed
+                    echo "</tr>";
+                }
+            } else {
+                echo "<tr><td colspan='4'>No data available</td></tr>";
+            }
+
+            // Close the database connection
+            // $conn->close();
+            ?>
+         </tbody>
+    </table>
+            <table border="1" class="elem-table2" id="elem2" style="disply: none;" width: 98%;>
+        <thead>
+            <tr>
+            <th>T.N</th>
+                <!-- <th>Group Name</th> -->
+                <th>L.P</th>
+                <th>F.P.P</th>
+                <th>A.V.P</th>
+                <th>A.A.S.P</th>
+                <th>A.R.P</th>
+                <th>S</th>
+                <!-- Add more table headers for other columns -->
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            // Check if there are rows in the result
+            if ($resultselem2->num_rows > 0) {
+                // Loop through each row of data
+                while ($row = $resultselem2->fetch_assoc()) {
                     echo "<tr>";
                     // echo "<td>" . $row["team_name"] . "</td>";
                     echo "<td>" . $row["group_name"] . "</td>";
@@ -568,7 +640,7 @@ setInterval(toggleTablesAndTitles, 5000); // Switch every 5 seconds (5000 millis
 
 
 
-
+  
 const span1 = document.getElementById("span1");
 const span2 = document.getElementById("span2");
 
@@ -584,7 +656,39 @@ setInterval(() => {
         span1.classList.remove("inactive");
         span1.classList.add("active");
     }
-}, 5000); // Switch spans every 3 seconds (adjust as needed)
+}, 10000); // Switch spans every 3 seconds (adjust as needed)
+
+// dispaly of elementary school scores for round 1 and 2
+document.addEventListener("DOMContentLoaded", function () {
+    const elem1 = document.getElementById("elem1");
+    const elem2 = document.getElementById("elem2");
+
+    setInterval(function () {
+        if (elem1.style.display === "none") {
+            elem1.style.display = "table";
+            elem2.style.display = "none";
+        } else {
+            elem1.style.display = "none";
+            elem2.style.display = "table";
+        }
+    }, 5000); // Switch tables every 5 seconds (5000 milliseconds)
+});
+// dispaly of middle school scores for round 1 and 2
+document.addEventListener("DOMContentLoaded", function () {
+    const middle1 = document.getElementById("middle1");
+    const middle2 = document.getElementById("middle2");
+
+    setInterval(function () {
+        if (middle1.style.display === "none") {
+            middle1.style.display = "table";
+            middle2.style.display = "none";
+        } else {
+            middle1.style.display = "none";
+            middle2.style.display = "table";
+        }
+    }, 5000); // Switch tables every 5 seconds (5000 milliseconds)
+});
+
 
 
 </script>
