@@ -323,7 +323,6 @@ transition: opacity 1s;
                 <th>F.P.P</th>
                 <th>A.V.P</th>
                 <th>A.A.S.P</th>
-                <th>S.T.E.T</th>
                 <th>A.R.P</th>
                 <th>round score</th>
                 <!-- Add more table headers for other columns -->
@@ -342,7 +341,6 @@ transition: opacity 1s;
                     echo "<td>" . $row["flight_path_points"] . "</td>";
                     echo "<td>" . $row["alliance_victory_points"] . "</td>";
                     echo "<td>" . $row["activate_alliance_system_points"] . "</td>";
-                    echo "<td>" . $row["space_time_energy_transfer_points"] . "</td>";
                     echo "<td>" . $row["alliance_route_planning_points"] . "</td>";
                     echo "<td>" . $row["single_round_score"] . "</td>";
                     // Add more table cells for other columns as needed
@@ -392,7 +390,6 @@ transition: opacity 1s;
                 <th>F.P.P</th>
                 <th>A.V.P</th>
                 <th>A.A.S.P</th>
-                <th>S.T.E.T</th>
                 <th>A.R.P</th>
                 <th>S</th>
                 <!-- Add more table headers for other columns -->
@@ -411,7 +408,6 @@ transition: opacity 1s;
                     echo "<td>" . $row["flight_path_points"] . "</td>";
                     echo "<td>" . $row["alliance_victory_points"] . "</td>";
                     echo "<td>" . $row["activate_alliance_system_points"] . "</td>";
-                    echo "<td>" . $row["space_time_energy_transfer_points"] . "</td>";
                     echo "<td>" . $row["alliance_route_planning_points"] . "</td>";
                     echo "<td>" . $row["single_round_score"] . "</td>";
                     // Add more table cells for other columns as needed
